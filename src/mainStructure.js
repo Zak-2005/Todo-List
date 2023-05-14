@@ -5,7 +5,7 @@
 
   const currentContent = document.querySelector(".content");
   currentContent.appendChild(content);
-  
+
   const leftHeader = document.createElement("div");
   leftHeader.classList.add("leftHeader")
   const home = document.createElement("img");
@@ -63,14 +63,28 @@
 
   sidebar.appendChild(pages);
 
-  const projects = document.createElement("div");
+  export const projects = document.createElement("div");
   projects.classList.add("projects");
+
+  const projectHeader = document.createElement("div");
+  projectHeader.classList.add("projectHeader")
 
   const projectTitle = document.createElement("h1");
   projectTitle.textContent = "Projects";
+
+  export const addProject = document.createElement("img");
+  addProject.classList.add("addProject");
+  addProject.src = "../addTask.png"
+  projects.appendChild(addProject)
+
+  
+
+  projectHeader.appendChild(projectTitle);
+  projectHeader.appendChild(addProject);
+
   const projectNames = document.createElement("ul");
 
-  projects.appendChild(projectTitle);
+  projects.appendChild(projectHeader);
   projects.appendChild(projectNames);
 
   sidebar.appendChild(projects);
