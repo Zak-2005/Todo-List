@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
     <title>Todo List</title>
-</head>
-<body>
-    <div class="content"></div>
-</body>
+  </head>
+  <body>
+    <div class="header">
+      <ul class="leftHeaderCommands">
+        <img src="home.png" alt="home button" />
+        <input type="search" name="search" id="searchBar" />
+      </ul>
+      <ul class="rightHeaderCommands">
+        <img src="notif.png" alt="notifications" />
+        <img src="addTask.png" alt="Add Task" />
+      </ul>
+    </div>
+    <div class="sidebar">
+      <ul class="defaultPages">
+        <li class="pages">Inbox</li>
+        <li class="pages">Today</li>
+        <li class="pages">Upcoming</li>
+      </ul>
+      <div class="projects">
+        <div class="projectHeader">Projects</div>
+        <ul class="Projects">
+        </ul>
+      </div>
+      
+    </div>
+  </body>
 </html>
