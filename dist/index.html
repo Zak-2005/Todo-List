@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Todo List</title>
   </head>
   <body>
@@ -18,18 +19,26 @@
         <img src="addTask.png" alt="Add Task" />
       </ul>
     </div>
-    <div class="sidebar">
-      <ul class="defaultPages">
-        <li class="pages">Inbox</li>
-        <li class="pages">Today</li>
-        <li class="pages">Upcoming</li>
-      </ul>
-      <div class="projects">
-        <div class="projectHeader">Projects</div>
-        <ul class="Projects">
-        </ul>
-      </div>
-      
+    <div class="bottomContent">
+        <div class="sidebar">
+          <ul class="defaultPages">
+            <li class="pages">Inbox</li>
+            <li class="pages">Today</li>
+            <li class="pages">Upcoming</li>
+          </ul>
+          <div class="projects">
+            <div class="projectSidebarHeader">Projects</div>
+            <ul class="Projects">
+            </ul>
+          </div>
+        </div>
+        <div class="todoContent">
+            <div class="PageHeader">
+                <div class="pageTitle">Inbox</div>
+                <img src="addTask.png" alt="Add Task" />
+            </div>
+            <div class="toDos"></div>
+        </div>
     </div>
   </body>
 </html>
