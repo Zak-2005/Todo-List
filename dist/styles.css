@@ -1,7 +1,8 @@
-body{
-    margin: 0px;
-    height: 100vh;
+body {
+  margin: 0px;
+  height: 100vh;
 }
+
 
 .header {
   display: flex;
@@ -31,41 +32,88 @@ img {
   height: 25px;
 }
 
-.bottomContent{
-    display:grid;
-    grid-template-columns: 1fr 6fr;
-    height: 100%;
+.bottomContent {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  height: 100%;
 }
 
-.sidebar{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(118, 166, 255);
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(118, 166, 255);
 }
 
-.sidebar>*{
-    margin: 1rem;
-    font-size: x-large;
-    font-weight: bold;
-    line-height: 1.5;
+.sidebar > * {
+  margin: 1rem;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
-.defaultPages{
-    list-style-type: none;
-    padding: 0px;
+.defaultPages {
+  list-style-type: none;
+  padding: 0px;
 }
 
-.todoContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.todoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.PageHeader{
-    display: flex;
-    justify-content: space-between;
-    font-size: x-large;
-    font-weight: 500;
-    margin-top: 1rem;
-    width: 50%;
+.PageHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+  font-weight: 500;
+  margin-top: 1rem;
+  width: 50%;
 }
 
+.Projects{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.projectSidebarHeader {
+  display: flex;
+  align-items: center;
+}
+
+.todoItem {
+  display: flex;
+  font-size: large;
+  justify-content: space-between;
+  width: 20rem;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  grid-auto-rows: 1fr;
+  width: 400px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(147, 185, 255, 0.938);
+  color: black;
+}
+label {
+  align-self: center;
+}
+
+.btn {
+  margin-bottom: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+input:focus {
+  border-color: 1px solid rgb(68, 134, 226);
+}
+.btn:hover {
+  background-color: rgb(68, 134, 226);
+}
