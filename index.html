@@ -5,40 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Todo List</title>
   </head>
   <body>
     <div class="header">
       <ul class="leftHeaderCommands">
-        <img src="home.png" alt="home button" />
+        <img class="home" src="home.png" alt="home button" />
         <input type="search" name="search" id="searchBar" />
       </ul>
       <ul class="rightHeaderCommands">
         <img src="notif.png" alt="notifications" />
-        <img src="addTask.png" alt="Add Task" />
+        <img class="addTask" src="addTask.png" alt="Add Task" />
       </ul>
     </div>
     <div class="bottomContent">
-        <div class="sidebar">
-          <ul class="defaultPages">
-            <li class="pages">Inbox</li>
-            <li class="pages">Today</li>
-            <li class="pages">Upcoming</li>
-          </ul>
-          <div class="projects">
-            <div class="projectSidebarHeader">Projects</div>
-            <ul class="Projects">
-            </ul>
+      <div class="sidebar">
+        <ul class="defaultPages">
+          <li class="pages">Inbox</li>
+          <li class="pages">Today</li>
+          <li class="pages">Upcoming</li>
+        </ul>
+        <div class="addedProjects">
+          <div class="projectSidebarHeader">
+            <div>Projects</div>
+            <img class="addProject" src="addTask.png" alt="Add Project" />
           </div>
+
+          <ul class="Projects"></ul>
         </div>
-        <div class="todoContent">
-            <div class="PageHeader">
-                <div class="pageTitle">Inbox</div>
-                <img src="addTask.png" alt="Add Task" />
-            </div>
-            <div class="toDos"></div>
+      </div>
+      <div class="todoContent">
+        <div class="PageHeader">
+          <div class="pageTitle">Inbox</div>
+          <img class="addTask" src="addTask.png" alt="Add Task" />
         </div>
+        <div class="toDos"></div>
+      </div>
     </div>
   </body>
 </html>
