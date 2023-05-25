@@ -10,11 +10,19 @@ export default class Task{
         this.name = name;
     }
 
-    getName(name){
+    getName(){
         return this.title;
     }
 
-    getDueDate(dueDate){
+    getDueDate(){
         return this.dueDate;
+    }
+
+    getDesc(){
+        return this.description;
+    }
+    
+    getPriority(){
+        return this.priority;
     }
 }
