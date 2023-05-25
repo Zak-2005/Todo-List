@@ -10,6 +10,9 @@ body {
   align-items: center;
   background-color: rgb(147, 185, 255);
 }
+.header>*>*{
+  cursor: pointer;
+}
 
 .leftHeaderCommands {
   margin-left: 1rem;
@@ -31,6 +34,9 @@ img {
   width: 25px;
   height: 25px;
 }
+#searchBar{
+  cursor: auto;
+}
 
 .bottomContent {
   display: grid;
@@ -51,9 +57,17 @@ img {
   line-height: 1.5;
 }
 
-.defaultPages {
+.defaultPages, .Projects {
   list-style-type: none;
   padding: 0px;
+  width: min-content;
+}
+.defaultPages>*, .Projects>*{
+  cursor: pointer;
+}
+.clickedPage, .defaultPages>*:hover, .Projects>*:hover{
+  background-color: rgb(68, 134, 226);
+  border-radius: 10px;
 }
 
 .todoContent {
@@ -61,6 +75,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
+
 .PageHeader {
   display: flex;
   justify-content: space-between;
@@ -70,23 +85,41 @@ img {
   width: 50%;
 }
 
+.projectItem{
+  display:flex;
+  align-items: center;
+}
+.projectItem>img{
+  height: auto;
+  width: 20px;
+  margin-left: 10px;
+}
+
 .Projects{
   display: flex;
   flex-direction: column;
   padding: 0px;
 }
 
+
 .projectSidebarHeader {
   display: flex;
   align-items: center;
 }
 
-.todoItem {
+.todoItem, .complete{
   display: flex;
   font-size: large;
   justify-content: space-between;
-  width: 20rem;
+  width: 400px;
   margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.expand{
+  cursor: pointer;
 }
 
 .form-container {
@@ -105,7 +138,7 @@ label {
   align-self: center;
 }
 
-.btn {
+.btn, .btn-cancel, .submitProject, .projectCancel{
   margin-bottom: 0.5rem;
   border: 1px solid black;
   border-radius: 10px;
@@ -114,6 +147,59 @@ label {
 input:focus {
   border-color: 1px solid rgb(68, 134, 226);
 }
-.btn:hover {
+.btn:hover, .btn-cancel:hover, .submitProject:hover, .projectCancel:hover {
   background-color: rgb(68, 134, 226);
+}
+
+.todoInfo{
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-right: 20px;
+  word-wrap: break-word;
+}
+
+.clickedTodo{
+  display: flex;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.clicked{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: start;
+}
+.clicked>*{
+  margin-bottom: 10px;
+}
+.clicked>:first-child{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+ .todoItem:hover{
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.todoControls{
+display: flex;
+align-items: center;
+}
+
+.priorityOne{
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+.priorityTwo{
+  background-color: rgb(255, 255, 123);
+  border-radius: 10px;
+}
+.priorityThree{
+  background-color: lightgreen;
+  border-radius: 10px;
 }
