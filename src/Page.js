@@ -65,13 +65,14 @@ export default class Page {
       Page.createTask(
         task.getName(),
         task.getDueDate(),
-        task.getPriority(),
-        task.getDesc()
+        task.getDesc(),
+        task.getPriority()
       );
     });
   }
 
   static createTask(name, dueDate, desc, prior) {
+
     const tasks = document.querySelector(".toDos");
     const task = document.createElement("div");
 
@@ -83,6 +84,11 @@ export default class Page {
     const todoName = document.createElement("div");
     todoName.classList.add("expand");
     todoName.textContent = name;
+
+    if(prior==="Priority 1"){task.classList.add("priorityOne");}
+    else if(prior==="Priority 2"){task.classList.add("priorityTwo");}
+    else if(prior==="Priority 3"){task.classList.add("priorityThree");}
+
 
     let clicked = false;
     todoName.addEventListener("click", () => {
@@ -112,6 +118,7 @@ export default class Page {
         todoInfo.appendChild(close);
       }
     });
+
     todoInfo.appendChild(todoName);
 
     const todoDate = document.createElement("div");
@@ -139,12 +146,6 @@ export default class Page {
           webpage.getProject(project).getTasks().splice(task, 1);
         });
     });
-
-    switch(prior){
-      case "Priority 1": task.classList.add("priorityOne"); break;
-      case "Priority 2": task.classList.add("priorityTwo"); break;
-      case "Priority 3": task.classList.add("priorityThree"); break;
-    }
 
     todoControls.appendChild(trashTodo);
 
